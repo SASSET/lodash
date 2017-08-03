@@ -1,7 +1,7 @@
 {
   "name": "sasset-lodash",
   "version": "0.1.0",
-  "description": "A collection of commonly used functions",
+  "description": "A collection of commonly used mixins",
   "main": "index.js",
   "dependencies": {
     "lodash": "^4.17.4"
