@@ -33,15 +33,23 @@ const _m = _.runInContext()
 // Used for makeHash
 const crypto = require('crypto')
 
+var _dirs = {
+    mixins: './mixins',
+    data: './data'
+}
+
+//README.md        censored.json    ciphermap.json   en-words.json    uncountable.json
+
 // Functions and storage for internal use only
 const _internals = {
     alternator: {
         i: 0,
         params: null
     },
-    uncountable: require('./data/uncountable'),
-    censored: require('./data/censored'),
-    ciphermap: require('./data/ciphermap'),
+    uncountable: require( `${_dirs.data}/uncountable` ),
+    censored: require( `${_dirs.data}/censored` ),
+    ciphermap: require( `${_dirs.data}/ciphermap` ),
+    enwords: require( `${_dirs.data}/en-words` ),
     htmlEntities: {
         '&': '&amp;',
         '<': '&lt;',
