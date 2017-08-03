@@ -1,6 +1,4 @@
-// -*- coding: utf-8 -*-
-
-'use strict';
+'use strict'
 
 module.exports = {
     a: ['/-\\', '@', '/*\\', '/=\\', '/\\', '^', 'aye', 'λ', 'ci', 'Z', '(L', '∂', 4],

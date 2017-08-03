@@ -1,3 +1,8 @@
+module.exports = require(
+    './mixins'
+)
+
+/*
 var normalizedPath = require("path").join(__dirname, "mixins");
 
 const _ = require('lodash')
@@ -10,7 +15,7 @@ require("fs")
 })
 
 module.exports = _
-
+*/
 
 /*
 utf8Encode
