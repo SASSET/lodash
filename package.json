@@ -1,0 +1,42 @@
+{
+  "name": "sasset-lodash",
+  "version": "0.1.0",
+  "description": "A collection of commonly used functions",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "code": "^4.1.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "jsdoc-to-markdown": "^3.0.0",
+    "jsdoc2md-anchors": "0.0.6",
+    "lab": "^14.1.1",
+    "yargs": "^8.0.2"
+  },
+  "keywords": [
+    "lodash",
+    "underscore",
+    "mixins"
+  ],
+  "scripts": {
+    "test": "lab"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SASSET/lodash.git"
+  },
+  "author": {
+    "name": "Justin Hyland",
+    "email": "j@linux.com",
+    "url": "http://justinhyland.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SASSET/lodash/issues"
+  },
+  "homepage": "https://github.com/SASSET/lodash#readme"
+}
