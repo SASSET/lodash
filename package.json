@@ -4,6 +4,7 @@
   "description": "A collection of commonly used mixins",
   "main": "index.js",
   "dependencies": {
+    "debug": "^3.0.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
