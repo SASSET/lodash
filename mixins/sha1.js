@@ -1,6 +1,14 @@
 'use strict'
 
-const _ = require('lodash')
+const _     = require( 'lodash' )
+const path  = require( 'path' )
+const debug = require( 'debug' )
+
+const mixin = path.basename( __filename ).replace( /\.js$/, '' )
+
+const _d = debug( `sasset:lodash:${mixin}` )
+
+_d( 'Included the mixin script "%s"',mixin  )
 
 /**
  * Calculate the sha1 hash of a specific string. This is the equivalent of PHP's sha1()
@@ -148,9 +156,5 @@ function sha1 ( str ) {
 
     return ( cvt_hex(H0) + cvt_hex(H1) + cvt_hex(H2) + cvt_hex(H3) + cvt_hex(H4) ).toLowerCase()
 }
-
-_.mixin({
-    sha1: sha1
-})
 
 module.exports = sha1

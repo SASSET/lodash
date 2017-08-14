@@ -1,6 +1,18 @@
 'use strict'
 
-const _ = require('lodash')
+const _      = require( 'lodash' )
+const path   = require( 'path' )
+const debug  = require( 'debug' )
+const crypto = require( 'crypto' )
+
+const mixin = path.basename( __filename ).replace( /\.js$/, '' )
+
+const _d = debug( `sasset:lodash:${mixin}` )
+
+_d( 'Included the mixin script "%s"',mixin  )
+
+_d( 'Included the mixin script "%s"',mixin  )
+_d( 'Included the mixin script "%s"', path.basename( __filename ) )
 
 /**
  * Generate a hash of a given string, using the provided salt
@@ -36,9 +48,5 @@ function makeHash ( str, salt, algo ) {
 
     return h.digest( algo )
 }
-
-_.mixin({
-    makeHash: makeHash
-})
 
 module.exports = makeHash

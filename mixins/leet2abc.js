@@ -1,6 +1,17 @@
 'use strict'
 
-const _ = require('lodash')
+const _     = require( 'lodash' )
+const path  = require( 'path' )
+const debug = require( 'debug' )
+
+const mixin = path.basename( __filename ).replace( /\.js$/, '' )
+
+const _d = debug( `sasset:lodash:${mixin}` )
+
+_d( 'Included the mixin script "%s"',mixin  )
+
+_d( 'Included the mixin script "%s"',mixin  )
+_d( 'Included the mixin script "%s"', path.basename( __filename ) )
 
 var _dirs = {
     mixins: './',
@@ -43,9 +54,5 @@ function leet2abc( leet ){
 
     return leet
 }
-
-_.mixin({
-  leet2abc: leet2abc
-})
 
 module.exports = leet2abc

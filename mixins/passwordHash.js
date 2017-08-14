@@ -1,6 +1,14 @@
 'use strict'
 
-const _ = require('lodash')
+const _     = require( 'lodash' )
+const path  = require( 'path' )
+const debug = require( 'debug' )
+
+const mixin = path.basename( __filename ).replace( /\.js$/, '' )
+
+const _d = debug( `sasset:lodash:${mixin}` )
+
+_d( 'Included the mixin script "%s"',mixin  )
 
 /**
  * Generate a salted hash of a specified password string - Similar to PHPs
@@ -38,9 +46,5 @@ function passwordHash ( password ) {
     // Return the salted hash with the salt prepended to it
     return salt + makeHash( password, salt )
 }
-
-_.mixin({
-    passwordHash: passwordHash
-})
 
 module.exports = passwordHash

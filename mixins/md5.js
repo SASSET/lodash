@@ -1,6 +1,15 @@
 'use strict'
 
-const _ = require('lodash')
+const _     = require( 'lodash' )
+const path  = require( 'path' )
+const debug = require( 'debug' )
+
+const mixin = path.basename( __filename ).replace( /\.js$/, '' )
+
+const _d = debug( `sasset:lodash:${mixin}` )
+
+_d( 'Included the mixin script "%s"',mixin  )
+
 //const utf8Decode = require('./utf8Decode')
 //const utf8Encode = require('./utf8Encode')
 
@@ -20,7 +29,7 @@ const _ = require('lodash')
  * @example md5('Hello World') === 'b10a8db164e0754105b7a99be72e3fe5'
  */
 function md5( str ) {
-    console.log('md5:',str)
+    _d('md5:',str)
     //  discuss at: http://phpjs.org/functions/md5/
     // original by: Webtoolkit.info (http://www.webtoolkit.info/)
     // improved by: Michael White (http://getsprink.com)
@@ -232,9 +241,5 @@ function md5( str ) {
 
     return temp.toLowerCase();
 }
-
-_.mixin({
-    md5: md5
-})
 
 module.exports = md5

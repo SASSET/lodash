@@ -1,6 +1,14 @@
 'use strict'
 
-const _ = require('lodash')
+const _     = require( 'lodash' )
+const path  = require( 'path' )
+const debug = require( 'debug' )
+
+const mixin = path.basename( __filename ).replace( /\.js$/, '' )
+
+const _d = debug( `sasset:lodash:${mixin}` )
+
+_d( 'Included the mixin script "%s"',mixin  )
 
 /**
  * Encodes an ISO-8859-1 string to UTF-8, this is meant to provide the same functionality
@@ -70,8 +78,4 @@ function utf8Encode ( str ) {
     return utftext
 }
 
-_.mixin({
-  utf8Encode: utf8Encode
-})
-
-//module.exports = utf8Encode
+module.exports = utf8Encode
