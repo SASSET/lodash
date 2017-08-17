@@ -80,7 +80,7 @@ function passwordStrength( password ){
       res = c.check( password )
 
       // Boolean or 0 number
-      if ( typeof res === 'boolean' || res === 0 ){
+      if ( typeof res === 'boolean' || ( _.isNumeric( res ) && res <= 0 ) ){
         if ( res === true ){
           strength = ++strength
           _d( `${fn} PASSED - strength increased from ${was} to ${strength}` )

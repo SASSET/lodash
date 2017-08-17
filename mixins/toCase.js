@@ -15,15 +15,14 @@ _d( 'Included the mixin script "%s"',mixin  )
 /**
  * Description...
  *
- * @name        module:_.generateSlug
- * @function    module:_.generateSlug
+ * @name        module:_.toCase
+ * @function    module:_.toCase
  * @memberof    module:_
  * @param       
  * @returns     {??}    ???
- * @see     https://confluence.atlassian.com/bitbucket/what-is-a-slug-224395839.html
- * @example _.generateSlug( ?? )
+ * @example _.toCase( ?? )
  *              // => ??
  */
-function generateSlug(){}
+//function toCase(){}
 
-module.exports = generateSlug
+module.exports = require('to-case')

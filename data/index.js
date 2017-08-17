@@ -17,6 +17,8 @@ const _internals = {
   //ptrn: '\\.(%s)$'
 }
 
+
+
 //  _( _internals.validExt ).map( v => v.replace('.','\\.') ).join('|')
 
 _internals.ptrnStr = _( _internals.validExt ).map( v => v.replace('.','\\.') ).join('|')

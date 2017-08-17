@@ -15,15 +15,22 @@ _d( 'Included the mixin script "%s"',mixin  )
 /**
  * Description...
  *
- * @name        module:_.generateSlug
- * @function    module:_.generateSlug
+ * @name        module:_.determineCase
+ * @function    module:_.determineCase
  * @memberof    module:_
  * @param       
  * @returns     {??}    ???
- * @see     https://confluence.atlassian.com/bitbucket/what-is-a-slug-224395839.html
- * @example _.generateSlug( ?? )
+ * @source  https://github.com/ianstormtaylor/case/blob/master/lib/index.js
+ * @example _.determineCase( ?? )
  *              // => ??
  */
-function generateSlug(){}
+function determineCase( string ){
+  for (var key in cases) {
+    if (key == 'none') continue;
+    var convert = cases[key];
+    if (convert(string) == string) return key;
+  }
+  return null;
+}
 
-module.exports = generateSlug
+module.exports = determineCase

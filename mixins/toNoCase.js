@@ -12,18 +12,22 @@ const _d = debug( `sasset:lodash:${mixin}` )
 
 _d( 'Included the mixin script "%s"',mixin  )
 
+var hasSpace = /\s/
+var hasSeparator = /(_|-|\.|:)/
+var hasCamel = /([a-z][A-Z]|[A-Z][a-z])/
+
 /**
  * Description...
  *
- * @name        module:_.generateSlug
- * @function    module:_.generateSlug
+ * @name        module:_.toNoCase
+ * @function    module:_.toNoCase
  * @memberof    module:_
  * @param       
  * @returns     {??}    ???
- * @see     https://confluence.atlassian.com/bitbucket/what-is-a-slug-224395839.html
- * @example _.generateSlug( ?? )
+ * @source    https://github.com/ianstormtaylor/to-no-case/blob/master/index.js
+ * @example _.toNoCase( ?? )
  *              // => ??
  */
-function generateSlug(){}
 
-module.exports = generateSlug
+
+module.exports = _.toCase.nome

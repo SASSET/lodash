@@ -1,0 +1,6 @@
+{
+  "sumPaths"      : "summarizePaths" ,
+  "getTypeof"     : "typeof",
+  "toNoCase"      : "toCleanCase",
+  "escapeRegexp"  : "escapeRegExp"
+}

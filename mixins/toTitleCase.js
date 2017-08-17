@@ -12,18 +12,21 @@ const _d = debug( `sasset:lodash:${mixin}` )
 
 _d( 'Included the mixin script "%s"',mixin  )
 
+var escaped = _internals.titleCaseMinors.map(escape)
+var minorMatcher = new RegExp('[^^]\\b(' + escaped.join('|') + ')\\b', 'ig')
+var punctuationMatcher = /:\s*(\w)/g
+
+
 /**
  * Description...
  *
- * @name        module:_.generateSlug
- * @function    module:_.generateSlug
+ * @name        module:_.toTitleCase
+ * @function    module:_.toTitleCase
  * @memberof    module:_
  * @param       
  * @returns     {??}    ???
- * @see     https://confluence.atlassian.com/bitbucket/what-is-a-slug-224395839.html
- * @example _.generateSlug( ?? )
+ * @example _.toTitleCase( ?? )
  *              // => ??
  */
-function generateSlug(){}
 
-module.exports = generateSlug
+module.exports = _.toCase.title

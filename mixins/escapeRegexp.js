@@ -15,15 +15,17 @@ _d( 'Included the mixin script "%s"',mixin  )
 /**
  * Description...
  *
- * @name        module:_.generateSlug
- * @function    module:_.generateSlug
+ * @name        module:_.escapeRegexp
+ * @function    module:_.escapeRegexp
  * @memberof    module:_
  * @param       
  * @returns     {??}    ???
- * @see     https://confluence.atlassian.com/bitbucket/what-is-a-slug-224395839.html
- * @example _.generateSlug( ?? )
+ * @source  https://www.npmjs.com/package/escape-regexp-component
+ * @example _.escapeRegexp( ?? )
  *              // => ??
  */
-function generateSlug(){}
+function escapeRegexp( str ){
+  return _.toString( str ).replace(/([.*+?=^!:${}()|[\]\/\\])/g, '\\$1')
+}
 
-module.exports = generateSlug
+module.exports = escapeRegexp
