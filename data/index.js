@@ -2,7 +2,7 @@
 
 const fs    = require( 'fs' )
 const path  = require( 'path' )
-const _d    = require( 'debug' )( 'sasset:data' )
+const _d    = require( 'debug' )( 'sasset:data:index' )
 const _     = require( 'lodash' )
 
 const dataDir = __dirname

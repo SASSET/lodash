@@ -22,11 +22,11 @@ _d( 'Included the mixin script "%s"',mixin  )
  * @param       {*}     item    Item to retrieve type for
  * @returns     {string}    Type of variable
  * @example 
- *  _.getType([])
+ *  _.type([])
  *  // => array
- *  _.getType({})
+ *  _.type({})
  *  // => object
- *  _.getType(() => {})
+ *  _.type(() => {})
  *  // => function
  */
 function getType ( item ) {

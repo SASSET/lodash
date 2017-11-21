@@ -31,13 +31,11 @@ _d( 'Included the mixin script "%s"',mixin  )
  *  // => false
  */
 function sortMatch ( object, source, customizer ) {
-    if( _.isUndefined( object ) || _.isUndefined( source ) ){
+    if( _.isUndefined( object ) || _.isUndefined( source ) )
         throw new Error('Must define two same-type values to sort and match')
-    }
 
-    if( _.getType( object ) !== _.getType( source ) ){
+    if( _.getType( object ) !== _.getType( source ) )
         return false
-    }
 
     if( _.isPlainObject( object )) {
         object = _.sortObj( object )

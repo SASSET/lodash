@@ -9,32 +9,32 @@ const { suite, it, before, describe, after } = lab
 
 describe('_.type mixin', () => {
     it('should identify an array as an array', done => {
-        expect( _.type([]) === 'array' ).to.equal( true )
+        expect( _.getType([]) === 'array' ).to.equal( true )
         done()
     })
 
     it('should identify an object as an object', done => {
-        expect( _.type({}) === 'object' ).to.equal( true )
+        expect( _.getType({}) === 'object' ).to.equal( true )
         done()
     })
 
     it('should identify a string as a string', done => {
-        expect( _.type('test') === 'string' ).to.equal( true )
+        expect( _.getType('test') === 'string' ).to.equal( true )
         done()
     })
 
     it('should identify a number as a number', done => {
-        expect( _.type( 5 ) === 'number' ).to.equal( true )
+        expect( _.getType( 5 ) === 'number' ).to.equal( true )
         done()
     })
 
     it('should return undefined when no param is provided', done => {
-        expect( _.type(  ) === 'undefined' ).to.equal( true )
+        expect( _.getType(  ) === 'undefined' ).to.equal( true )
         done()
     })
 
     it('should identify a null value', done => {
-        expect( _.type( null ) === 'null' ).to.equal( true )
+        expect( _.getType( null ) === 'null' ).to.equal( true )
         done()
     })
 })

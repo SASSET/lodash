@@ -41,10 +41,10 @@ function passwordHash ( password ) {
     // Generate the salt
     // THIS MUST NOT CHANGE! If this value is not the same as what
     // passwordVerify expects, no hash will be validated
-    const salt = randStr( 20 )
+    const salt = _.randStr( 20 )
 
     // Return the salted hash with the salt prepended to it
-    return salt + makeHash( password, salt )
+    return salt + _.hash( password, salt )
 }
 
 module.exports = passwordHash

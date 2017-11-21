@@ -60,3 +60,4 @@ function sortObj( obj, comparator ) {
 }
 
 module.exports = sortObj
+

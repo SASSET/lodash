@@ -44,8 +44,8 @@ function uniqObjs ( arr ) {
         // Use _.sortObj to sort the contents of the object by the keys, since stringify
         // will use the current order (which means identical objects in different orders
         // will be seen as discrepancies)
-        if( _.indexOf( uniqs, JSON.stringify( sortObj( obj ) ) ) === -1 ){
-            uniqs.push( JSON.stringify( sortObj( obj ) ) )
+        if( _.indexOf( uniqs, JSON.stringify( _.sortObj( obj ) ) ) === -1 ){
+            uniqs.push( JSON.stringify( _.sortObj( obj ) ) )
             return true
         }
 

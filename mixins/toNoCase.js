@@ -29,5 +29,4 @@ var hasCamel = /([a-z][A-Z]|[A-Z][a-z])/
  *              // => ??
  */
 
-
-module.exports = _.toCase.nome
+module.exports = _.toCase.none

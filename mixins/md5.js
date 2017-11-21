@@ -43,7 +43,9 @@ function md5( str ) {
 
     var xl;
 
-    var rotateLeft = function(lValue, iShiftBits) {
+    var rotateLeft = (lValue, iShiftBits) => (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits))
+    
+    var rotateLeft_ = function(lValue, iShiftBits) {
         return (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits));
     };
 

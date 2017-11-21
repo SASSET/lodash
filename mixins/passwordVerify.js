@@ -46,7 +46,7 @@ function passwordVerify ( password, passwdHash ) {
     const hash = passwdHash.substr( 20 )
 
     // Check the hash against a hash generated with the same data
-    return _.makeHash( password, salt ) === hash
+    return _.hash( password, salt ) === hash
 }
 
 module.exports = passwordVerify

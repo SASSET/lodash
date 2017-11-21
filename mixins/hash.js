@@ -17,18 +17,18 @@ _d( 'Included the mixin script "%s"', path.basename( __filename ) )
 /**
  * Generate a hash of a given string, using the provided salt
  *
- * @name        module:_.makeHash
- * @function    module:_.makeHash
+ * @name        module:_.hash
+ * @function    module:_.hash
  * @memberof    module:_
  * @param       {string}    str     String to hash
  * @param       {string}    salt    Salt to use for hash
  * @returns     {string}    base64 encoded hash
  * @example 
- *  _.makeHash('superSecretPassword','secret-salt')
+ *  _.hash('superSecretPassword','secret-salt')
  *  // => ebA3UZET3LDQWzl <cut> TUnV5oRxAvOLsA==
  */
  //  openssl list-message-digest-algorithms
-function makeHash ( str, salt, algo ) {
+function hash ( str, salt, algo ) {
     if ( algo ){
         if ( ! _.isString( algo ) )
             throw new Error('_.hash() was given an invalid algorythm value')
@@ -49,4 +49,4 @@ function makeHash ( str, salt, algo ) {
     return h.digest( algo )
 }
 
-module.exports = makeHash
+module.exports = hash
