@@ -15,8 +15,6 @@ const mixinPath = path.join( __dirname, mixinFolder )
 _d( 'Mixin Directory: %s (%s)',mixinPath )
 
 fs.readdirSync( mixinPath ).forEach( file => {
-  //_d( 'File: %s', file )
-
   let mixin    = file.replace( /\.js$/, '' )
   let resolve  = path.resolve( `./${mixinFolder}`, file )
   let relative = path.relative( './', resolve )
@@ -24,18 +22,9 @@ fs.readdirSync( mixinPath ).forEach( file => {
 
   let mixinObj = {}
 
-  
-  //_d( 'Mixin: %s', mixin )
-  //_d( 'resolve: %s', resolve )
-  //_d( 'relative: %s', relative )
-  //_d( '_require: %s', _require )
-
   _d( 'requiring "%s" as mixin "%s"', _require, mixin )
   
-
   mixinObj[ mixin ] = require( _require )
-
-  
 
   if ( _.has( _data.aliases, mixin ) ){
     let aliases = _data.aliases[ mixin ]
@@ -56,7 +45,7 @@ fs.readdirSync( mixinPath ).forEach( file => {
         return
       }
 
-      alias = _.trim(alias)
+      alias = _.trim( alias )
 
       if ( _.has( mixinObj, alias ) ){
         _d( 'Duplicate alias provided for mixin "%s" - Alias name "%s" is already utilized by mixin "%s"', mixin, alias, (_.has( usedAliases, alias ) ? usedAliases[ alias ] : 'Unknown'))

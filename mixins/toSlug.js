@@ -40,8 +40,8 @@ function toSlug( string, options ){
   // Assign default options
   options = _.defaults( options, {
     replacement: '-',
-    lower: false,
-    upper: true,
+    lower: true,
+    upper: false,
     trim: true
   })
 

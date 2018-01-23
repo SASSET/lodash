@@ -38,13 +38,13 @@ function hash ( str, salt, algo ) {
     }
 
 
-    if( ! _.isString( str ) || ! _.isString( salt ))
-        throw new Error('_.hash() requires two string parameters, a string to hash and a salt')
+    if( ! _.isString( str ) || ! _.isString( salt ) )
+        throw new Error( '_.hash() requires two string parameters, a string to hash and a salt' )
 
     const h = crypto.createHash('sha512')
 
-    h.update(str)
-    h.update(salt)
+    h.update( str )
+    h.update( salt )
 
     return h.digest( algo )
 }

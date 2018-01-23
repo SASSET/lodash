@@ -31,33 +31,26 @@ _d( 'Included the mixin script "%s"',mixin  )
  *  data                           // []
  */
 function pullSampleSize( arr, size ){
-    if( size === 0 ){
+    if( size === 0 )
         return []
-    }
 
-    if( _.isUndefined( size ) ){
+    if( _.isUndefined( size ) )
         size = 1
-    }
 
-    if( ! _.isNumber( size ) ){
+    if( ! _.isNumber( size ) )
         throw new Error( `Expected size to be undefined or a number - received a ${_.getTypeof( size )}` )
-    }
 
-    if( _.isUndefined( arr ) ){
+    if( _.isUndefined( arr ) )
         return undefined
-    }
 
-    if( ! _.isArray( arr ) ){
-        throw new Error( `Expected to sample an array - received a ${_.getTypeof( arr )}` )
-    }
+    if( ! _.isArray( arr ) )
+        throw new Error( `Expected to sample an array - received a ${_.fgetTypeof( arr )}` )
 
-    if( _.isEmpty( arr ) ){
+    if( _.isEmpty( arr ) )
         return []
-    }
 
-    if( size > _.size( arr ) ){
+    if( size > _.size( arr ) )
         size = _.size( arr )
-    }
 
     const result = []
 

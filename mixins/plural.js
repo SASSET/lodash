@@ -28,28 +28,25 @@ _d( 'Included the mixin script "%s"',mixin  )
  *  // => flies
  */
 function plural( str ){
-    if (str.lastChar() === 'y') {
-        if ( (str.charAt(str.length - 2)).isVowel() ) {
-            // If the y has a vowel before it (i.e. toys), then you just add the s.
-            return str + 's';
-        }
+  if (str.lastChar() === 'y') {
+    if ( (str.charAt(str.length - 2)).isVowel() ) 
+      // If the y has a vowel before it (i.e. toys), then you just add the s.
+      return str + 's'
         
-        // If a this ends in y with a consonant before it (fly), you drop the y and add -ies to make it plural.
-        return str.slice(0, -1) + 'ies';
-    }
+    // If a this ends in y with a consonant before it (fly), you drop the y and add -ies to make it plural.
+    return str.slice(0, -1) + 'ies'
+  }
     
-    if ( str.substring( str.length - 2) === 'us') {
-        // ends in us -> i, needs to preceede the generic 's' rule
-        return str.slice(0, -2) + 'i';
-    }
+  if ( str.substring( str.length - 2) === 'us') 
+    // ends in us -> i, needs to preceede the generic 's' rule
+    return str.slice(0, -2) + 'i'
     
-    if (['ch', 'sh'].indexOf( str.substring( str.length - 2)) !== -1 || ['x','s'].indexOf(str.lastChar()) !== -1) {
-        // If a this ends in ch, sh, x, s, you add -es to make it plural.
-        return str + 'es';
-    }
+  if (['ch', 'sh'].indexOf( str.substring( str.length - 2)) !== -1 || ['x','s'].indexOf(str.lastChar()) !== -1) 
+    // If a this ends in ch, sh, x, s, you add -es to make it plural.
+    return str + 'es'
 
-    // anything else, just add s
-    return str + 's';
+  // anything else, just add s
+  return str + 's'
 }
 
 module.exports = plural
