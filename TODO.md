@@ -1,3 +1,2 @@
 ## Mixins To Create
-- `parseDec()` - Simple wrapper around `parseInt`, passing `10` as the radix (2nd parameter) (EG: `parseDec('123.123')` => `parseInt('123.123', 10)`)
-- 
+- `parseDec()` - Simple wrapper around `parseInt`, passing `10` as the radix (2nd parameter). This is basically a lazy way to avoid the annoying _Missing radix parameter_ [warning](https://stackoverflow.com/questions/7818903/jslint-says-missing-radix-parameter-what-should-i-do) in React (EG: `parseDec('123.123')` => `parseInt('123.123', 10)`)
